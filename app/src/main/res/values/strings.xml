@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RestCacheTest</string>
+
+    <string name="robotoRegular">Roboto-Regular.ttf</string>
+    <string name="robotoBold">Roboto-Bold.ttf</string>
+
+    <string name="searchHint">Search Youtube</string>
+
+</resources>

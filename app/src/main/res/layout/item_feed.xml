@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.upworktest.restcachetest.viewmodel.YtItemViewModel" />
+
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="@dimen/margin_med"
+                android:scaleType="centerCrop"
+                app:imageUrl="@{vm.image}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="@dimen/margin_med"
+                android:layout_toRightOf="@+id/icon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="@{vm.title}"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/text_size_medium"
+                    app:font='@{@string/robotoRegular}' />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/solid_material_green_rounded_corner"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/margin_med"
+                    android:paddingRight="@dimen/margin_med"
+                    android:text="cached"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="@{vm.cached ? View.VISIBLE : View.GONE}"
+                    app:font='@{@string/robotoRegular}' />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text='@{vm.description}'
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="@dimen/text_size_medium"
+                        app:font='@{@string/robotoRegular}' />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text='@{vm.channelTitle}'
+                        android:textColor="@color/colorTextGray"
+                        android:textSize="@dimen/text_size_medium"
+                        app:font='@{@string/robotoRegular}' />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

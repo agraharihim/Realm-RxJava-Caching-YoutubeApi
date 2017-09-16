@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.upworktest.restcachetest.viewmodel.InternetErrorViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_med"
+            android:src="@drawable/no_network" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:minHeight="100dp"
+            android:paddingLeft="@dimen/margin_med"
+            android:paddingRight="@dimen/margin_med"
+            android:text="@{vm.offlineText}"
+            android:textColor="@color/colorTextDark"
+            android:textSize="@dimen/text_size_medium"
+            app:font='@{@string/robotoRegular}' />
+
+    </RelativeLayout>
+</layout>
