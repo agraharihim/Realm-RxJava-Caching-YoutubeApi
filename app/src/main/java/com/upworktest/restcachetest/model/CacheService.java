@@ -5,7 +5,7 @@ import java.util.List;
 import io.reactivex.Observable;
 
 /**
- * Created by agrahari on 15/09/17.
+ * declares methods which interact with cache
  */
 
 public interface CacheService {

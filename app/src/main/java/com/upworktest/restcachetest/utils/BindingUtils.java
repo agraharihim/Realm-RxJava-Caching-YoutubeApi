@@ -9,7 +9,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,8 +23,6 @@ import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
-
-import static android.content.ContentValues.TAG;
 
 @SuppressWarnings("unused")
 public class BindingUtils {
@@ -47,17 +44,6 @@ public class BindingUtils {
     @BindingAdapter({"items", "view_provider"})
     public static void bindAdapterWithDefaultBinder(@NonNull RecyclerView recyclerView, @Nullable Observable<List<ViewModel>> items, @Nullable ViewProvider viewProvider) {
         recyclerView.setAdapter(new RecyclerViewAdapter(items, viewProvider, binder));
-    }
-
-    @BindingConversion
-    @NonNull
-    public static ViewProvider getViewProviderForStaticLayout(@LayoutRes final int layoutId) {
-        return new ViewProvider() {
-            @Override
-            public int getView(ViewModel vm) {
-                return layoutId;
-            }
-        };
     }
 
     @BindingConversion
@@ -101,7 +87,6 @@ public class BindingUtils {
                 .fit().into(imageView);
 
     }
-
 
     @BindingAdapter(value = {"font"})
     public static void setTypeface(TextView textView, String fontName) {

@@ -1,9 +1,10 @@
-/* Cached Individual Video Data Object */
-
 package com.upworktest.restcachetest.model;
 
 import io.realm.RealmObject;
 
+/**
+ * Cached Individual Video Data
+ */
 
 public class CachedVideoData extends RealmObject {
 

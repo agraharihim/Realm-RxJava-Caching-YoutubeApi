@@ -1,5 +1,7 @@
 package com.upworktest.restcachetest.model
-
+/**
+ * Contains data class for youtube responses
+ */
 object YtRespModel {
 
     data class SearchResp(var kind: String?, var etag: String?, var nextPageToken: String?, var prevPageToken: String?

@@ -21,12 +21,6 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
 
-//    override fun onDestroy() {
-//        BindingUtils.getBinder()?.bind(binding, null)
-//        binding?.executePendingBindings()
-//        super.onDestroy()
-//    }
-
     @NonNull
     protected abstract fun createViewModel(): ViewModel
 

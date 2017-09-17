@@ -1,10 +1,12 @@
-/* Cached Data List Wrapper */
 package com.upworktest.restcachetest.model;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
+/**
+ * Cached Data List Wrapper
+ */
 
 public class CachedVideoListData extends RealmObject {
 
