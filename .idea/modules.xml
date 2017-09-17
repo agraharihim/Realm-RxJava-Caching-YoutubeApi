@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RestCacheTest.iml" filepath="$PROJECT_DIR$/RestCacheTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Realm-RxJava-Caching-YoutubeApi.iml" filepath="$PROJECT_DIR$/Realm-RxJava-Caching-YoutubeApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
