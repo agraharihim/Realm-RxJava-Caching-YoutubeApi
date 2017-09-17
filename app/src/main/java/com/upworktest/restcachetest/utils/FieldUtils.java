@@ -9,9 +9,6 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.functions.Cancellable;
 
-/**
- * Cached Individual Video Data
- */
 public class FieldUtils {
     @NonNull
     public static <T> Observable<T> toObservable(@NonNull final ObservableField<T> field) {
